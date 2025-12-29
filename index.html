@@ -23,38 +23,31 @@
 
 <body class="bg-white text-slate-800">
 
-  <!-- Language Toggle -->
+  <!-- Language Toggle (4 languages) -->
   <div class="fixed top-4 right-6 z-[60] flex gap-2 text-sm font-medium">
-    <button id="btnZh" onclick="setLang('zh')" class="px-3 py-1 rounded-full bg-slate-900 text-white">中文</button>
+    <button id="btnZhHant" onclick="setLang('zh-Hant')" class="px-3 py-1 rounded-full bg-slate-900 text-white">繁中</button>
     <button id="btnEn" onclick="setLang('en')" class="px-3 py-1 rounded-full bg-slate-200 text-slate-800">EN</button>
+    <button id="btnZhHans" onclick="setLang('zh-Hans')" class="px-3 py-1 rounded-full bg-slate-200 text-slate-800">简中</button>
+    <button id="btnMs" onclick="setLang('ms')" class="px-3 py-1 rounded-full bg-slate-200 text-slate-800">BM</button>
   </div>
 
   <!-- NAV -->
   <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-100">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-baseline gap-2">
-        <span class="text-2xl font-bold tracking-widest text-slate-900">
-          <span data-lang="zh">留白＋</span>
-          <span data-lang="en" class="hidden">Whitespace +</span>
-        </span>
-        <span class="text-xs font-light tracking-widest text-slate-400 uppercase">
-          <span data-lang="zh">Whitespace +</span>
-          <span data-lang="en" class="hidden">Content & Design</span>
-        </span>
+        <span class="text-2xl font-bold tracking-widest text-slate-900" data-i18n="brand.name">留白＋</span>
+        <span class="text-xs font-light tracking-widest text-slate-400 uppercase" data-i18n="brand.tagline">Whitespace +</span>
       </div>
 
-      <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium mr-4">
         <a href="#about" class="hover:text-blue-600 transition">
-          <span data-lang="zh">品牌介紹</span>
-          <span data-lang="en" class="hidden">About</span>
+          <span data-i18n="nav.about">品牌介紹</span>
         </a>
         <a href="#services" class="hover:text-blue-600 transition">
-          <span data-lang="zh">服務項目</span>
-          <span data-lang="en" class="hidden">Services</span>
+          <span data-i18n="nav.services">服務項目</span>
         </a>
         <a href="#contact" class="px-5 py-2 bg-slate-900 text-white rounded-full hover:bg-blue-600 transition">
-          <span data-lang="zh">立即諮詢</span>
-          <span data-lang="en" class="hidden">Contact</span>
+          <span data-i18n="nav.contact">立即諮詢</span>
         </a>
       </div>
     </div>
@@ -69,23 +62,17 @@
              alt="Logo">
       </div>
 
-      <h2 class="text-sm tracking-[0.4em] text-blue-600 font-bold mb-4 uppercase">
-        <span data-lang="zh">內容與設計整合</span>
-        <span data-lang="en" class="hidden">Content & Design Integration</span>
+      <h2 class="text-sm tracking-[0.4em] text-blue-600 font-bold mb-4 uppercase" data-i18n="hero.kicker">
+        內容與設計整合
       </h2>
 
       <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-8 leading-tight">
-        <span data-lang="zh">把想法整理成</span>
-        <span data-lang="en" class="hidden">Turn ideas into</span>
-        <span class="text-slate-400 font-light italic">
-          <span data-lang="zh">質感的成果。</span>
-          <span data-lang="en" class="hidden">refined results.</span>
-        </span>
+        <span data-i18n="hero.titleA">把想法整理成</span>
+        <span class="text-slate-400 font-light italic" data-i18n="hero.titleB">質感的成果。</span>
       </h1>
 
-      <p class="text-slate-500 leading-relaxed max-w-2xl mx-auto">
-        <span data-lang="zh">內容策劃・視覺設計・AI 整合，協助你把雜亂變清晰，把想法變成可用的成果。</span>
-        <span data-lang="en" class="hidden">Content planning, visual design, and AI integration — turning messy ideas into clear, usable deliverables.</span>
+      <p class="text-slate-500 leading-relaxed max-w-2xl mx-auto" data-i18n="hero.desc">
+        內容策劃・視覺設計・AI 整合，協助你把雜亂變清晰，把想法變成可用的成果。
       </p>
     </div>
   </section>
@@ -95,99 +82,66 @@
     <div class="max-w-4xl mx-auto border-y border-slate-100 py-16">
       <div class="flex flex-col md:flex-row gap-12 items-start">
         <div class="md:w-1/3">
-          <h3 class="text-2xl font-bold text-slate-900 mb-2">
-            <span data-lang="zh">品牌介紹</span>
-            <span data-lang="en" class="hidden">About</span>
-          </h3>
-          <p class="text-blue-600 font-medium tracking-widest uppercase text-xs">
-            <span data-lang="zh">About Whitespace +</span>
-            <span data-lang="en" class="hidden">Whitespace +</span>
-          </p>
+          <h3 class="text-2xl font-bold text-slate-900 mb-2" data-i18n="about.title">品牌介紹</h3>
+          <p class="text-blue-600 font-medium tracking-widest uppercase text-xs" data-i18n="about.subtitle">About Whitespace +</p>
         </div>
 
         <div class="md:w-2/3">
           <p class="text-2xl text-slate-900 leading-snug mb-8 font-light">
-            <span data-lang="zh">留白，不是空白，<br><span class="font-bold text-blue-600">而是讓重要的東西留下來。</span></span>
-            <span data-lang="en" class="hidden">Whitespace is not emptiness — <br><span class="font-bold text-blue-600">it’s what lets the essential stand out.</span></span>
+            <span data-i18n="about.lead1">留白，不是空白，</span><br>
+            <span class="font-bold text-blue-600" data-i18n="about.lead2">而是讓重要的東西留下來。</span>
           </p>
 
           <div class="space-y-6 text-slate-600 leading-loose">
-            <p>
-              <span data-lang="zh">
-                「留白 Whitespace +」是一個專注於內容整理、結構優化與視覺呈現的創作與顧問型服務品牌。
-                協助品牌、商家與創作者，把零散的想法、模糊的概念與雜亂的素材，整理成清楚、有層次、能被理解、也能被使用的內容成果。
-              </span>
-              <span data-lang="en" class="hidden">
-                Whitespace + is a studio-style consulting service focused on content structuring, clarity, and visual presentation.
-                We help brands and creators turn scattered ideas and messy assets into clear, layered, usable deliverables.
-              </span>
+            <p data-i18n="about.p1">
+              「留白 Whitespace +」是一個專注於內容整理、結構優化與視覺呈現的創作與顧問型服務品牌。
+              協助品牌、商家與創作者，把零散的想法、模糊的概念與雜亂的素材，整理成清楚、有層次、能被理解、也能被使用的內容成果。
             </p>
 
-            <p>
-              <span data-lang="zh">
-                在資訊過載的時代，我們不追求過度包裝與堆疊，而是回到本質，找出真正重要的訊息，留下剛剛好的內容與空間。
-              </span>
-              <span data-lang="en" class="hidden">
-                In an information-overloaded world, we don’t over-decorate. We go back to fundamentals — identify what matters and leave just the right amount of space.
-              </span>
+            <p data-i18n="about.p2">
+              在資訊過載的時代，我們不追求過度包裝與堆疊，而是回到本質，找出真正重要的訊息，留下剛剛好的內容與空間。
             </p>
 
             <div class="py-8 my-6">
               <h4 class="text-slate-900 font-bold mb-6 flex items-center">
                 <span class="w-8 h-[1px] bg-blue-600 mr-3"></span>
-                <span data-lang="zh">我們在做什麼</span>
-                <span data-lang="en" class="hidden">What we do</span>
+                <span data-i18n="about.whatWeDo">我們在做什麼</span>
               </h4>
 
               <ul class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8 text-sm">
                 <li class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                  <span data-lang="zh">內容梳理與結構重組</span>
-                  <span data-lang="en" class="hidden">Content restructuring & clarity</span>
+                  <span data-i18n="about.list1">內容梳理與結構重組</span>
                 </li>
                 <li class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                  <span data-lang="zh">品牌與個人定位文字優化</span>
-                  <span data-lang="en" class="hidden">Brand & personal positioning copy</span>
+                  <span data-i18n="about.list2">品牌與個人定位文字優化</span>
                 </li>
                 <li class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                  <span data-lang="zh">社群平台內容整理 (IG/小紅書/FB)</span>
-                  <span data-lang="en" class="hidden">Social content (IG / Xiaohongshu / FB)</span>
+                  <span data-i18n="about.list3">社群平台內容整理 (IG/小紅書/FB)</span>
                 </li>
                 <li class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                  <span data-lang="zh">視覺與文字的一致性協調</span>
-                  <span data-lang="en" class="hidden">Visual & copy consistency</span>
+                  <span data-i18n="about.list4">視覺與文字的一致性協調</span>
                 </li>
                 <li class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                  <span data-lang="zh">AI 輔助創作流程優化</span>
-                  <span data-lang="en" class="hidden">AI-assisted workflow optimization</span>
+                  <span data-i18n="about.list5">AI 輔助創作流程優化</span>
                 </li>
               </ul>
             </div>
 
-            <p class="italic text-slate-500 border-l-2 border-slate-200 pl-4">
-              <span data-lang="zh">我們的工作，不是替你「多說」，而是幫你說對、說清楚、說得剛好。</span>
-              <span data-lang="en" class="hidden">We don’t add noise. We help you say it right, clearly, and just enough.</span>
+            <p class="italic text-slate-500 border-l-2 border-slate-200 pl-4" data-i18n="about.quote">
+              我們的工作，不是替你「多說」，而是幫你說對、說清楚、說得剛好。
             </p>
 
             <div class="pt-10">
-              <p class="text-lg font-bold text-slate-900 mb-2">
-                <span data-lang="zh">我們相信</span>
-                <span data-lang="en" class="hidden">We believe</span>
-              </p>
+              <p class="text-lg font-bold text-slate-900 mb-2" data-i18n="about.weBelieve">我們相信</p>
 
               <p class="text-slate-600">
-                <span data-lang="zh">
-                  真正有力量的內容，不在於說了多少，而在於留下了什麼。<br>
-                  <span class="text-blue-600 font-medium">留白，是一種選擇，也是一種專業判斷。</span>
-                </span>
-                <span data-lang="en" class="hidden">
-                  Powerful content isn’t about how much you say — it’s about what you leave behind.<br>
-                  <span class="text-blue-600 font-medium">Whitespace is a choice — and a professional judgment.</span>
-                </span>
+                <span data-i18n="about.belief1">真正有力量的內容，不在於說了多少，而在於留下了什麼。</span><br>
+                <span class="text-blue-600 font-medium" data-i18n="about.belief2">留白，是一種選擇，也是一種專業判斷。</span>
               </p>
             </div>
           </div>
@@ -201,185 +155,94 @@
   <section id="services" class="py-24 bg-slate-50 px-6 text-left">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <h3 class="text-3xl font-bold mb-4">
-          <span data-lang="zh">核心服務與定價</span>
-          <span data-lang="en" class="hidden">Services & Pricing</span>
-        </h3>
-        <p class="text-slate-400 text-sm italic">
-          <span data-lang="zh">點擊項目可查看具體案例展示</span>
-          <span data-lang="en" class="hidden">Click an item to view examples</span>
-        </p>
+        <h3 class="text-3xl font-bold mb-4" data-i18n="services.title">核心服務與定價</h3>
+        <p class="text-slate-400 text-sm italic" data-i18n="services.hint">點擊項目可查看具體案例展示</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <div onclick="openModal('modalFood')" class="service-card bg-white p-10 rounded-3xl">
           <div class="text-blue-500 mb-6 text-4xl">🍳</div>
-          <h4 class="text-xl font-bold mb-3">
-            <span data-lang="zh">美食照片修圖</span>
-            <span data-lang="en" class="hidden">Food Photo Retouching</span>
-          </h4>
-          <p class="text-slate-500 text-sm mb-6">
-            <span data-lang="zh">
-              專注商用平台視覺優化（Grab / Panda / 社群）<br>
-              色調校正、亮度與對比優化<br>
-              提升食物質感與吸引力<br>
-              適合外送平台、菜單、宣傳用途
-            </span>
-            <span data-lang="en" class="hidden">
-              Focused on visual optimization for commercial platforms (Grab / Panda / Social Media)<br>
-              Color correction and brightness & contrast optimization<br>
-              Enhancing food texture and visual appeal<br>
-              Suitable for delivery platforms, menus, and promotional use
-            </span>
+          <h4 class="text-xl font-bold mb-3" data-i18n="svc.food.title">美食照片修圖</h4>
+          <p class="text-slate-500 text-sm mb-6" data-i18n="svc.food.desc">
+            專注商用平台視覺優化（Grab / Panda / 社群）<br>
+            色調校正、亮度與對比優化<br>
+            提升食物質感與吸引力<br>
+            適合外送平台、菜單、宣傳用途
           </p>
           <div class="mt-auto text-2xl font-bold text-slate-900">
-            RM 158 <span class="text-sm font-normal text-slate-400">
-              <span data-lang="zh">/ 15張起</span>
-              <span data-lang="en" class="hidden">/ from 15 photos</span>
-            </span>
+            RM 158 <span class="text-sm font-normal text-slate-400" data-i18n="svc.food.priceNote">/ 15張起</span>
           </div>
         </div>
 
         <div onclick="window.location.href='#contact'" class="service-card bg-white p-10 rounded-3xl">
           <div class="text-blue-500 mb-6 text-4xl">📱</div>
-          <h4 class="text-xl font-bold mb-3">
-            <span data-lang="zh">社群貼文製作</span>
-            <span data-lang="en" class="hidden">Social Post Package</span>
-          </h4>
-          <p class="text-slate-500 text-sm mb-6">
-            <span data-lang="zh">
-              穩定產出、整體視覺一致的社群內容<br>
-              圖像排版設計<br>
-              基本文案撰寫<br>
-              每週固定產出，維持品牌曝光
-            </span>
-            <span data-lang="en" class="hidden">
-              Consistent social media content with unified visual branding<br>
-              Graphic layout and visual design<br>
-              Essential copywriting<br>
-              Weekly scheduled posts to maintain brand exposure
-            </span>
+          <h4 class="text-xl font-bold mb-3" data-i18n="svc.social.title">社群貼文製作</h4>
+          <p class="text-slate-500 text-sm mb-6" data-i18n="svc.social.desc">
+            穩定產出、整體視覺一致的社群內容<br>
+            圖像排版設計<br>
+            基本文案撰寫<br>
+            每週固定產出，維持品牌曝光
           </p>
           <div class="mt-auto text-2xl font-bold text-slate-900">
-            RM 800 <span class="text-sm font-normal text-slate-400">
-              <span data-lang="zh">/ 8則</span>
-              <span data-lang="en" class="hidden">/ 8 posts</span>
-            </span>
+            RM 800 <span class="text-sm font-normal text-slate-400" data-i18n="svc.social.priceNote">/ 8則</span>
           </div>
         </div>
 
         <div onclick="openModal('modalPoster')" class="service-card bg-white p-10 rounded-3xl">
           <div class="text-blue-500 mb-6 text-4xl">🎨</div>
-          <h4 class="text-xl font-bold mb-3">
-            <span data-lang="zh">活動海報設計</span>
-            <span data-lang="en" class="hidden">Event Poster Design</span>
-          </h4>
-          <p class="text-slate-500 text-sm mb-6">
-            <span data-lang="zh">
-              活動海報設計<br>
-              清楚傳達重點，提升活動參與率<br>
-              視覺主題規劃<br>
-              活動資訊清晰編排<br>
-              可整合線上報名 QR Code
-            </span>
-            <span data-lang="en" class="hidden">
-              Event Poster Design<br>
-              Clear message delivery to increase event participation<br>
-              Visual theme planning<br>
-              Well-structured and easy-to-read event information layout<br>
-              Optional integration of online registration QR codes
-            </span>
+          <h4 class="text-xl font-bold mb-3" data-i18n="svc.poster.title">活動海報設計</h4>
+          <p class="text-slate-500 text-sm mb-6" data-i18n="svc.poster.desc">
+            活動海報設計<br>
+            清楚傳達重點，提升活動參與率<br>
+            視覺主題規劃<br>
+            活動資訊清晰編排<br>
+            可整合線上報名 QR Code
           </p>
           <div class="mt-auto text-2xl font-bold text-slate-900">
-            RM 150 <span class="text-sm font-normal text-slate-400">
-              <span data-lang="zh">/ 起</span>
-              <span data-lang="en" class="hidden">/ from</span>
-            </span>
+            RM 150 <span class="text-sm font-normal text-slate-400" data-i18n="svc.poster.priceNote">/ 起</span>
           </div>
         </div>
 
         <div onclick="openModal('modalVideo')" class="service-card bg-white p-10 rounded-3xl">
           <div class="text-blue-500 mb-6 text-4xl">🎵</div>
-          <h4 class="text-xl font-bold mb-3">
-            <span data-lang="zh">定制化歌曲與影音</span>
-            <span data-lang="en" class="hidden">Customized Music & Video</span>
-          </h4>
-          <p class="text-slate-500 text-sm mb-6">
-            <span data-lang="zh">
-              定制歌詞或主題旋律<br>
-              適合品牌、活動、求婚<br>
-              可搭配簡易影音呈現
-            </span>
-            <span data-lang="en" class="hidden">
-              Custom lyrics or theme melody<br>
-              Suitable for brands, events, and proposals<br>
-              Optional simple video accompaniment available
-            </span>
+          <h4 class="text-xl font-bold mb-3" data-i18n="svc.video.title">定制化歌曲與影音</h4>
+          <p class="text-slate-500 text-sm mb-6" data-i18n="svc.video.desc">
+            定制歌詞或主題旋律<br>
+            適合品牌、活動、求婚<br>
+            可搭配簡易影音呈現
           </p>
           <div class="mt-auto text-2xl font-bold text-slate-900">
-            RM 55 <span class="text-sm font-normal text-slate-400">
-              <span data-lang="zh">/ 首</span>
-              <span data-lang="en" class="hidden">/ track</span>
-            </span>
+            RM 55 <span class="text-sm font-normal text-slate-400" data-i18n="svc.video.priceNote">/ 首</span>
           </div>
         </div>
 
         <div onclick="window.location.href='#contact'" class="service-card bg-white p-10 rounded-3xl">
           <div class="text-blue-500 mb-6 text-4xl">💻</div>
-          <h4 class="text-xl font-bold mb-3">
-            <span data-lang="zh">網頁設計與規劃</span>
-            <span data-lang="en" class="hidden">Website Design & Planning</span>
-          </h4>
-          <p class="text-slate-500 text-sm mb-6">
-            <span data-lang="zh">
-              實用導向的網站結構與視覺設計<br>
-              網站內容架構規劃<br>
-              頁面流程與視覺風格設計<br>
-              適用於品牌官網、個人介紹、服務型網站
-            </span>
-            <span data-lang="en" class="hidden">
-              Function-driven website structure and visual design<br>
-              Website information architecture planning<br>
-              User flow and visual style design<br>
-              Ideal for brand websites, personal portfolios, and service-oriented websites
-            </span>
+          <h4 class="text-xl font-bold mb-3" data-i18n="svc.web.title">網頁設計與規劃</h4>
+          <p class="text-slate-500 text-sm mb-6" data-i18n="svc.web.desc">
+            實用導向的網站結構與視覺設計<br>
+            網站內容架構規劃<br>
+            頁面流程與視覺風格設計<br>
+            適用於品牌官網、個人介紹、服務型網站
           </p>
           <div class="mt-auto text-2xl font-bold text-slate-900">
             RM 800 – 1500
-            <span class="text-sm font-normal text-slate-400">
-              <span data-lang="zh">／依頁面與需求評估</span>
-              <span data-lang="en" class="hidden"> / depending on scope</span>
-            </span>
+            <span class="text-sm font-normal text-slate-400" data-i18n="svc.web.priceNote">／依頁面與需求評估</span>
           </div>
         </div>
 
-        <!-- ✅ 改成可點擊彈窗：圖像設計與個性化商品 -->
         <div onclick="openModal('modalMerch')" class="service-card bg-white p-10 rounded-3xl">
           <div class="text-blue-500 mb-6 text-4xl">👕</div>
-          <h4 class="text-xl font-bold mb-3">
-            <span data-lang="zh">圖像設計與個性化商品</span>
-            <span data-lang="en" class="hidden">Design & Personalized Merch</span>
-          </h4>
-          <p class="text-slate-500 text-sm mb-6">
-            <span data-lang="zh">
-              將設計延伸為實體商品<br>
-              圖像風格需求設計<br>
-              適用於 T-shirt、環保袋等<br>
-              小量客製、風格明確
-            </span>
-            <span data-lang="en" class="hidden">
-              Extending design into physical products<br>
-              Custom graphic style design<br>
-              Suitable for T-shirts, tote bags, and related items<br>
-              Small-batch customization with a clear and defined style
-            </span>
+          <h4 class="text-xl font-bold mb-3" data-i18n="svc.merch.title">圖像設計與個性化商品</h4>
+          <p class="text-slate-500 text-sm mb-6" data-i18n="svc.merch.desc">
+            將設計延伸為實體商品<br>
+            圖像風格需求設計<br>
+            適用於 T-shirt、環保袋等<br>
+            小量客製、風格明確
           </p>
           <div class="mt-auto text-2xl font-bold text-slate-900">
-            RM 65 <span class="text-sm font-normal text-slate-400">
-              <span data-lang="zh">/ 起</span>
-              <span data-lang="en" class="hidden">/ from</span>
-            </span>
+            RM 65 <span class="text-sm font-normal text-slate-400" data-i18n="svc.merch.priceNote">/ 起</span>
           </div>
         </div>
 
@@ -390,16 +253,13 @@
   <!-- CONTACT -->
   <section id="contact" class="py-24 px-6 text-center">
     <div class="max-w-4xl mx-auto bg-slate-900 rounded-[3rem] p-12 text-white">
-      <h3 class="text-3xl font-bold mb-8">
-        <span data-lang="zh">準備好開始您的「留白」計劃嗎？</span>
-        <span data-lang="en" class="hidden">Ready to start your Whitespace plan?</span>
-      </h3>
+      <h3 class="text-3xl font-bold mb-8" data-i18n="contact.title">準備好開始您的「留白」計劃嗎？</h3>
 
-      <a href="https://wa.me/60166262464?text=你好，我想諮詢服務"
+      <a id="waLink"
+         href="https://wa.me/60166262464?text=你好，我想諮詢服務"
          target="_blank"
          class="inline-block px-12 py-5 bg-green-500 text-white rounded-full font-bold text-xl transition transform hover:scale-105">
-        <span data-lang="zh">WhatsApp 立即諮詢</span>
-        <span data-lang="en" class="hidden">WhatsApp — Contact Now</span>
+        <span data-i18n="contact.cta">WhatsApp 立即諮詢</span>
       </a>
     </div>
   </section>
@@ -409,10 +269,7 @@
     <div class="modal-content text-center">
       <span onclick="closeModal('modalFood')" class="absolute right-6 top-6 text-2xl cursor-pointer text-slate-400">&times;</span>
 
-      <h3 class="font-bold text-xl mb-6">
-        <span data-lang="zh">美食修圖 前後對比</span>
-        <span data-lang="en" class="hidden">Before & After — Food Retouch</span>
-      </h3>
+      <h3 class="font-bold text-xl mb-6" data-i18n="modal.food.title">美食修圖 前後對比</h3>
 
       <div class="img-placeholder mb-8">
         <img id="foodImg" src="https://i.postimg.cc/0Qfj9tND/美食前.webp" class="w-full h-80 object-contain" alt="food">
@@ -421,12 +278,12 @@
       <div class="flex gap-4">
         <button onclick="document.getElementById('foodImg').src='https://i.postimg.cc/0Qfj9tND/美食前.webp'"
                 class="flex-1 py-4 bg-slate-100 rounded-2xl font-bold">
-          <span data-lang="zh">原圖</span><span data-lang="en" class="hidden">Original</span>
+          <span data-i18n="modal.food.original">原圖</span>
         </button>
 
         <button onclick="document.getElementById('foodImg').src='https://i.postimg.cc/8CvrgBM8/美食后.png'"
                 class="flex-1 py-4 bg-blue-600 text-white rounded-2xl font-bold shadow-lg">
-          <span data-lang="zh">修圖後 ✨</span><span data-lang="en" class="hidden">Retouched ✨</span>
+          <span data-i18n="modal.food.retouch">修圖後 ✨</span>
         </button>
       </div>
     </div>
@@ -437,10 +294,7 @@
     <div class="modal-content text-center">
       <span onclick="closeModal('modalPoster')" class="absolute right-6 top-6 text-2xl cursor-pointer text-slate-400">&times;</span>
 
-      <h3 class="font-bold text-xl mb-6">
-        <span data-lang="zh">活動海報 作品集</span>
-        <span data-lang="en" class="hidden">Poster Portfolio</span>
-      </h3>
+      <h3 class="font-bold text-xl mb-6" data-i18n="modal.poster.title">活動海報 作品集</h3>
 
       <div class="img-placeholder mb-8">
         <img id="galleryImg"
@@ -450,9 +304,9 @@
       </div>
 
       <div class="flex justify-between items-center px-4">
-        <button onclick="changeG(-1)" class="text-blue-600 font-bold">❮ <span data-lang="zh">上一張</span><span data-lang="en" class="hidden">Prev</span></button>
+        <button onclick="changeG(-1)" class="text-blue-600 font-bold">❮ <span data-i18n="common.prev">上一張</span></button>
         <span id="gCount" class="text-slate-400 text-sm">1 / 3</span>
-        <button onclick="changeG(1)" class="text-blue-600 font-bold"><span data-lang="zh">下一張</span><span data-lang="en" class="hidden">Next</span> ❯</button>
+        <button onclick="changeG(1)" class="text-blue-600 font-bold"><span data-i18n="common.next">下一張</span> ❯</button>
       </div>
     </div>
   </div>
@@ -462,10 +316,7 @@
     <div class="modal-content relative">
       <span onclick="closeModal('modalVideo')" class="absolute right-6 top-6 text-2xl cursor-pointer text-slate-400">&times;</span>
 
-      <h3 class="font-bold text-xl mb-6 text-center">
-        <span data-lang="zh">AI 影音作品展示</span>
-        <span data-lang="en" class="hidden">AI Music & Video Showcase</span>
-      </h3>
+      <h3 class="font-bold text-xl mb-6 text-center" data-i18n="modal.video.title">AI 影音作品展示</h3>
 
       <div class="aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl relative">
         <iframe
@@ -483,22 +334,18 @@
            target="_blank"
            rel="noopener"
            class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-slate-900 text-white font-bold hover:bg-blue-600 transition">
-          <span data-lang="zh">無法嵌入？改到 YouTube 觀看</span>
-          <span data-lang="en" class="hidden">Can’t embed? Watch on YouTube</span>
+          <span data-i18n="modal.video.fallback">無法嵌入？改到 YouTube 觀看</span>
         </a>
       </div>
     </div>
   </div>
 
-  <!-- ✅ MODAL: MERCH (已植入你的 5 張圖) -->
+  <!-- MODAL: MERCH -->
   <div id="modalMerch" class="modal">
     <div class="modal-content text-center">
       <span onclick="closeModal('modalMerch')" class="absolute right-6 top-6 text-2xl cursor-pointer text-slate-400">&times;</span>
 
-      <h3 class="font-bold text-xl mb-6">
-        <span data-lang="zh">圖像設計與個性化商品 作品展示</span>
-        <span data-lang="en" class="hidden">Design & Personalized Merch — Gallery</span>
-      </h3>
+      <h3 class="font-bold text-xl mb-6" data-i18n="modal.merch.title">圖像設計與個性化商品 作品展示</h3>
 
       <div class="img-placeholder mb-8">
         <img id="merchImg"
@@ -508,41 +355,369 @@
       </div>
 
       <div class="flex justify-between items-center px-4">
-        <button onclick="changeMerch(-1)" class="text-blue-600 font-bold">❮ <span data-lang="zh">上一張</span><span data-lang="en" class="hidden">Prev</span></button>
+        <button onclick="changeMerch(-1)" class="text-blue-600 font-bold">❮ <span data-i18n="common.prev">上一張</span></button>
         <span id="merchCount" class="text-slate-400 text-sm">1 / 5</span>
-        <button onclick="changeMerch(1)" class="text-blue-600 font-bold"><span data-lang="zh">下一張</span><span data-lang="en" class="hidden">Next</span> ❯</button>
+        <button onclick="changeMerch(1)" class="text-blue-600 font-bold"><span data-i18n="common.next">下一張</span> ❯</button>
       </div>
     </div>
   </div>
 
   <!-- ONE SCRIPT ONLY -->
   <script>
-    // ====== Language Switch ======
-    function setLang(lang) {
-      document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+    // ====== i18n dictionary (4 languages) ======
+    const I18N = {
+      "zh-Hant": {
+        "brand.name": "留白＋",
+        "brand.tagline": "Whitespace +",
+        "nav.about": "品牌介紹",
+        "nav.services": "服務項目",
+        "nav.contact": "立即諮詢",
 
-      document.querySelectorAll('[data-lang]').forEach(el => {
-        el.classList.toggle('hidden', el.dataset.lang !== lang);
+        "hero.kicker": "內容與設計整合",
+        "hero.titleA": "把想法整理成",
+        "hero.titleB": "質感的成果。",
+        "hero.desc": "內容策劃・視覺設計・AI 整合，協助你把雜亂變清晰，把想法變成可用的成果。",
+
+        "about.title": "品牌介紹",
+        "about.subtitle": "About Whitespace +",
+        "about.lead1": "留白，不是空白，",
+        "about.lead2": "而是讓重要的東西留下來。",
+        "about.p1": "「留白 Whitespace +」是一個專注於內容整理、結構優化與視覺呈現的創作與顧問型服務品牌。協助品牌、商家與創作者，把零散的想法、模糊的概念與雜亂的素材，整理成清楚、有層次、能被理解、也能被使用的內容成果。",
+        "about.p2": "在資訊過載的時代，我們不追求過度包裝與堆疊，而是回到本質，找出真正重要的訊息，留下剛剛好的內容與空間。",
+        "about.whatWeDo": "我們在做什麼",
+        "about.list1": "內容梳理與結構重組",
+        "about.list2": "品牌與個人定位文字優化",
+        "about.list3": "社群平台內容整理 (IG/小紅書/FB)",
+        "about.list4": "視覺與文字的一致性協調",
+        "about.list5": "AI 輔助創作流程優化",
+        "about.quote": "我們的工作，不是替你「多說」，而是幫你說對、說清楚、說得剛好。",
+        "about.weBelieve": "我們相信",
+        "about.belief1": "真正有力量的內容，不在於說了多少，而在於留下了什麼。",
+        "about.belief2": "留白，是一種選擇，也是一種專業判斷。",
+
+        "services.title": "核心服務與定價",
+        "services.hint": "點擊項目可查看具體案例展示",
+
+        "svc.food.title": "美食照片修圖",
+        "svc.food.desc": "專注商用平台視覺優化（Grab / Panda / 社群）<br>色調校正、亮度與對比優化<br>提升食物質感與吸引力<br>適合外送平台、菜單、宣傳用途",
+        "svc.food.priceNote": "/ 15張起",
+
+        "svc.social.title": "社群貼文製作",
+        "svc.social.desc": "穩定產出、整體視覺一致的社群內容<br>圖像排版設計<br>基本文案撰寫<br>每週固定產出，維持品牌曝光",
+        "svc.social.priceNote": "/ 8則",
+
+        "svc.poster.title": "活動海報設計",
+        "svc.poster.desc": "活動海報設計<br>清楚傳達重點，提升活動參與率<br>視覺主題規劃<br>活動資訊清晰編排<br>可整合線上報名 QR Code",
+        "svc.poster.priceNote": "/ 起",
+
+        "svc.video.title": "定制化歌曲與影音",
+        "svc.video.desc": "定制歌詞或主題旋律<br>適合品牌、活動、求婚<br>可搭配簡易影音呈現",
+        "svc.video.priceNote": "/ 首",
+
+        "svc.web.title": "網頁設計與規劃",
+        "svc.web.desc": "實用導向的網站結構與視覺設計<br>網站內容架構規劃<br>頁面流程與視覺風格設計<br>適用於品牌官網、個人介紹、服務型網站",
+        "svc.web.priceNote": "／依頁面與需求評估",
+
+        "svc.merch.title": "圖像設計與個性化商品",
+        "svc.merch.desc": "將設計延伸為實體商品<br>圖像風格需求設計<br>適用於 T-shirt、環保袋等<br>小量客製、風格明確",
+        "svc.merch.priceNote": "/ 起",
+
+        "contact.title": "準備好開始您的「留白」計劃嗎？",
+        "contact.cta": "WhatsApp 立即諮詢",
+
+        "modal.food.title": "美食修圖 前後對比",
+        "modal.food.original": "原圖",
+        "modal.food.retouch": "修圖後 ✨",
+
+        "modal.poster.title": "活動海報 作品集",
+        "modal.video.title": "AI 影音作品展示",
+        "modal.video.fallback": "無法嵌入？改到 YouTube 觀看",
+        "modal.merch.title": "圖像設計與個性化商品 作品展示",
+
+        "common.prev": "上一張",
+        "common.next": "下一張"
+      },
+
+      "en": {
+        "brand.name": "Whitespace +",
+        "brand.tagline": "Content & Design",
+        "nav.about": "About",
+        "nav.services": "Services",
+        "nav.contact": "Contact",
+
+        "hero.kicker": "Content & Design Integration",
+        "hero.titleA": "Turn ideas into",
+        "hero.titleB": "refined results.",
+        "hero.desc": "Content planning, visual design, and AI integration — turning messy ideas into clear, usable deliverables.",
+
+        "about.title": "About",
+        "about.subtitle": "Whitespace +",
+        "about.lead1": "Whitespace is not emptiness —",
+        "about.lead2": "it’s what lets the essential stand out.",
+        "about.p1": "Whitespace + is a studio-style consulting service focused on content structuring, clarity, and visual presentation. We help brands and creators turn scattered ideas and messy assets into clear, layered, usable deliverables.",
+        "about.p2": "In an information-overloaded world, we don’t over-decorate. We go back to fundamentals — identify what matters and leave just the right amount of space.",
+        "about.whatWeDo": "What we do",
+        "about.list1": "Content restructuring & clarity",
+        "about.list2": "Brand & personal positioning copy",
+        "about.list3": "Social content (IG / Xiaohongshu / FB)",
+        "about.list4": "Visual & copy consistency",
+        "about.list5": "AI-assisted workflow optimization",
+        "about.quote": "We don’t add noise. We help you say it right, clearly, and just enough.",
+        "about.weBelieve": "We believe",
+        "about.belief1": "Powerful content isn’t about how much you say — it’s about what you leave behind.",
+        "about.belief2": "Whitespace is a choice — and a professional judgment.",
+
+        "services.title": "Services & Pricing",
+        "services.hint": "Click an item to view examples",
+
+        "svc.food.title": "Food Photo Retouching",
+        "svc.food.desc": "Focused on visual optimization for commercial platforms (Grab / Panda / Social Media)<br>Color correction and brightness & contrast optimization<br>Enhancing food texture and visual appeal<br>Suitable for delivery platforms, menus, and promotional use",
+        "svc.food.priceNote": "/ from 15 photos",
+
+        "svc.social.title": "Social Post Package",
+        "svc.social.desc": "Consistent social media content with unified visual branding<br>Graphic layout and visual design<br>Essential copywriting<br>Weekly scheduled posts to maintain brand exposure",
+        "svc.social.priceNote": "/ 8 posts",
+
+        "svc.poster.title": "Event Poster Design",
+        "svc.poster.desc": "Event Poster Design<br>Clear message delivery to increase event participation<br>Visual theme planning<br>Well-structured and easy-to-read event information layout<br>Optional integration of online registration QR codes",
+        "svc.poster.priceNote": "/ from",
+
+        "svc.video.title": "Customized Music & Video",
+        "svc.video.desc": "Custom lyrics or theme melody<br>Suitable for brands, events, and proposals<br>Optional simple video accompaniment available",
+        "svc.video.priceNote": "/ track",
+
+        "svc.web.title": "Website Design & Planning",
+        "svc.web.desc": "Function-driven website structure and visual design<br>Website information architecture planning<br>User flow and visual style design<br>Ideal for brand websites, personal portfolios, and service-oriented websites",
+        "svc.web.priceNote": "/ depending on scope",
+
+        "svc.merch.title": "Design & Personalized Merch",
+        "svc.merch.desc": "Extending design into physical products<br>Custom graphic style design<br>Suitable for T-shirts, tote bags, and related items<br>Small-batch customization with a clear and defined style",
+        "svc.merch.priceNote": "/ from",
+
+        "contact.title": "Ready to start your Whitespace plan?",
+        "contact.cta": "WhatsApp — Contact Now",
+
+        "modal.food.title": "Before & After — Food Retouch",
+        "modal.food.original": "Original",
+        "modal.food.retouch": "Retouched ✨",
+
+        "modal.poster.title": "Poster Portfolio",
+        "modal.video.title": "AI Music & Video Showcase",
+        "modal.video.fallback": "Can’t embed? Watch on YouTube",
+        "modal.merch.title": "Design & Personalized Merch — Gallery",
+
+        "common.prev": "Prev",
+        "common.next": "Next"
+      },
+
+      "zh-Hans": {
+        "brand.name": "留白＋",
+        "brand.tagline": "Whitespace +",
+        "nav.about": "品牌介绍",
+        "nav.services": "服务项目",
+        "nav.contact": "立即咨询",
+
+        "hero.kicker": "内容与设计整合",
+        "hero.titleA": "把想法整理成",
+        "hero.titleB": "有质感的成果。",
+        "hero.desc": "内容策划・视觉设计・AI 整合，协助你把杂乱变清晰，把想法变成可用的成果。",
+
+        "about.title": "品牌介绍",
+        "about.subtitle": "About Whitespace +",
+        "about.lead1": "留白，不是空白，",
+        "about.lead2": "而是让重要的东西留下来。",
+        "about.p1": "「留白 Whitespace +」是一个专注于内容整理、结构优化与视觉呈现的创作与顾问型服务品牌。协助品牌、商家与创作者，把零散的想法、模糊的概念与杂乱的素材，整理成清楚、有层次、能被理解、也能被使用的内容成果。",
+        "about.p2": "在信息过载的时代，我们不追求过度包装与堆叠，而是回到本质，找出真正重要的信息，留下刚刚好的内容与空间。",
+        "about.whatWeDo": "我们在做什么",
+        "about.list1": "内容梳理与结构重组",
+        "about.list2": "品牌与个人定位文案优化",
+        "about.list3": "社交平台内容整理（IG/小红书/FB）",
+        "about.list4": "视觉与文字的一致性协调",
+        "about.list5": "AI 辅助创作流程优化",
+        "about.quote": "我们的工作，不是替你「多说」，而是帮你说对、说清楚、说得刚好。",
+        "about.weBelieve": "我们相信",
+        "about.belief1": "真正有力量的内容，不在于说了多少，而在于留下了什么。",
+        "about.belief2": "留白，是一种选择，也是一种专业判断。",
+
+        "services.title": "核心服务与定价",
+        "services.hint": "点击项目可查看具体案例展示",
+
+        "svc.food.title": "美食照片修图",
+        "svc.food.desc": "专注商用平台视觉优化（Grab / Panda / 社交媒体）<br>色调校正、亮度与对比优化<br>提升食物质感与吸引力<br>适合外卖平台、菜单、宣传用途",
+        "svc.food.priceNote": "/ 15张起",
+
+        "svc.social.title": "社交贴文制作",
+        "svc.social.desc": "稳定产出、整体视觉一致的社交内容<br>图像排版设计<br>基础文案撰写<br>每周固定产出，维持品牌曝光",
+        "svc.social.priceNote": "/ 8则",
+
+        "svc.poster.title": "活动海报设计",
+        "svc.poster.desc": "活动海报设计<br>清楚传达重点，提升活动参与率<br>视觉主题规划<br>活动信息清晰编排<br>可整合线上报名 QR Code",
+        "svc.poster.priceNote": "/ 起",
+
+        "svc.video.title": "定制歌曲与影音",
+        "svc.video.desc": "定制歌词或主题旋律<br>适合品牌、活动、求婚<br>可搭配简易影音呈现",
+        "svc.video.priceNote": "/ 首",
+
+        "svc.web.title": "网页设计与规划",
+        "svc.web.desc": "实用导向的网站结构与视觉设计<br>网站内容架构规划<br>页面流程与视觉风格设计<br>适用于品牌官网、个人介绍、服务型网站",
+        "svc.web.priceNote": "／依页面与需求评估",
+
+        "svc.merch.title": "图像设计与个性化商品",
+        "svc.merch.desc": "将设计延伸为实体商品<br>图像风格需求设计<br>适用于 T-shirt、环保袋等<br>小量定制、风格明确",
+        "svc.merch.priceNote": "/ 起",
+
+        "contact.title": "准备好开始你的「留白」计划吗？",
+        "contact.cta": "WhatsApp 立即咨询",
+
+        "modal.food.title": "美食修图 前后对比",
+        "modal.food.original": "原图",
+        "modal.food.retouch": "修图后 ✨",
+
+        "modal.poster.title": "活动海报 作品集",
+        "modal.video.title": "AI 影音作品展示",
+        "modal.video.fallback": "无法嵌入？改到 YouTube 观看",
+        "modal.merch.title": "图像设计与个性化商品 作品展示",
+
+        "common.prev": "上一张",
+        "common.next": "下一张"
+      },
+
+      "ms": {
+        "brand.name": "Whitespace +",
+        "brand.tagline": "Kandungan & Reka Bentuk",
+        "nav.about": "Tentang",
+        "nav.services": "Perkhidmatan",
+        "nav.contact": "Hubungi",
+
+        "hero.kicker": "Integrasi Kandungan & Reka Bentuk",
+        "hero.titleA": "Tukarkan idea menjadi",
+        "hero.titleB": "hasil yang kemas.",
+        "hero.desc": "Perancangan kandungan, reka bentuk visual, dan integrasi AI — menukar idea yang berserabut menjadi hasil yang jelas dan boleh digunakan.",
+
+        "about.title": "Tentang",
+        "about.subtitle": "Whitespace +",
+        "about.lead1": "Ruang kosong bukanlah kekosongan —",
+        "about.lead2": "ia membuat perkara penting lebih menonjol.",
+        "about.p1": "Whitespace + ialah perkhidmatan konsultasi bergaya studio yang fokus pada penstrukturan kandungan, kejelasan, dan penyampaian visual. Kami membantu jenama dan pencipta menukar idea bertaburan serta bahan yang berselerak menjadi hasil yang jelas, tersusun, dan boleh digunakan.",
+        "about.p2": "Dalam dunia yang sarat maklumat, kami tidak berlebihan menghias. Kami kembali kepada asas — kenal pasti yang penting dan tinggalkan ruang yang tepat.",
+        "about.whatWeDo": "Apa yang kami buat",
+        "about.list1": "Susun semula kandungan & struktur",
+        "about.list2": "Penambahbaikan copy kedudukan jenama & individu",
+        "about.list3": "Kandungan media sosial (IG / Xiaohongshu / FB)",
+        "about.list4": "Konsistensi visual & copy",
+        "about.list5": "Pengoptimuman aliran kerja dibantu AI",
+        "about.quote": "Kami tidak menambah bising. Kami bantu anda menyampaikan dengan tepat, jelas, dan secukupnya.",
+        "about.weBelieve": "Kami percaya",
+        "about.belief1": "Kandungan yang berkuasa bukan tentang berapa banyak yang dikatakan — tetapi apa yang ditinggalkan.",
+        "about.belief2": "Whitespace ialah pilihan — dan pertimbangan profesional.",
+
+        "services.title": "Perkhidmatan & Harga",
+        "services.hint": "Klik item untuk lihat contoh",
+
+        "svc.food.title": "Retouch Foto Makanan",
+        "svc.food.desc": "Fokus pada pengoptimuman visual untuk platform komersial (Grab / Panda / Media Sosial)<br>Pembetulan warna serta kecerahan & kontras<br>Meningkatkan tekstur dan daya tarikan makanan<br>Sesuai untuk platform penghantaran, menu dan promosi",
+        "svc.food.priceNote": "/ bermula 15 foto",
+
+        "svc.social.title": "Pakej Pos Media Sosial",
+        "svc.social.desc": "Kandungan konsisten dengan identiti visual yang seragam<br>Reka letak grafik dan reka bentuk visual<br>Penulisan copy asas<br>Pos mingguan berjadual untuk mengekalkan pendedahan jenama",
+        "svc.social.priceNote": "/ 8 pos",
+
+        "svc.poster.title": "Reka Bentuk Poster Acara",
+        "svc.poster.desc": "Reka bentuk poster acara<br>Mesej jelas untuk meningkatkan penyertaan<br>Perancangan tema visual<br>Susun atur info acara yang mudah dibaca<br>Pilihan integrasi QR pendaftaran",
+        "svc.poster.priceNote": "/ bermula",
+
+        "svc.video.title": "Muzik & Video Tempahan",
+        "svc.video.desc": "Lirik khas atau melodi tema<br>Sesuai untuk jenama, acara dan lamaran<br>Pilihan video ringkas tersedia",
+        "svc.video.priceNote": "/ lagu",
+
+        "svc.web.title": "Reka Bentuk & Perancangan Laman Web",
+        "svc.web.desc": "Struktur laman dan reka bentuk visual berorientasikan fungsi<br>Perancangan seni bina maklumat<br>Aliran pengguna dan gaya visual<br>Sesuai untuk laman jenama, portfolio peribadi dan laman perkhidmatan",
+        "svc.web.priceNote": "/ bergantung skop",
+
+        "svc.merch.title": "Reka Bentuk & Produk Personalisasi",
+        "svc.merch.desc": "Mengembangkan reka bentuk kepada produk fizikal<br>Reka bentuk grafik mengikut gaya yang diminta<br>Sesuai untuk T-shirt, beg tote dan lain-lain<br>Tempahan kuantiti kecil dengan gaya yang jelas",
+        "svc.merch.priceNote": "/ bermula",
+
+        "contact.title": "Sedia untuk mulakan pelan Whitespace anda?",
+        "contact.cta": "WhatsApp — Hubungi Sekarang",
+
+        "modal.food.title": "Sebelum & Selepas — Retouch Makanan",
+        "modal.food.original": "Asal",
+        "modal.food.retouch": "Retouch ✨",
+
+        "modal.poster.title": "Portfolio Poster",
+        "modal.video.title": "Pameran Muzik & Video AI",
+        "modal.video.fallback": "Tak boleh embed? Tonton di YouTube",
+        "modal.merch.title": "Galeri Reka Bentuk & Produk Personalisasi",
+
+        "common.prev": "Sebelum",
+        "common.next": "Seterusnya"
+      }
+    };
+
+    const LANG_META = {
+      "zh-Hant": { htmlLang: "zh-TW" },
+      "zh-Hans": { htmlLang: "zh-CN" },
+      "en": { htmlLang: "en" },
+      "ms": { htmlLang: "ms" }
+    };
+
+    function applyI18n(lang) {
+      const dict = I18N[lang] || I18N["zh-Hant"];
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        const val = dict[key];
+        if (typeof val !== "string") return;
+
+        // allow <br> in some strings
+        el.innerHTML = val;
       });
 
-      // Toggle button styles
-      const btnZh = document.getElementById('btnZh');
-      const btnEn = document.getElementById('btnEn');
-      if (btnZh && btnEn) {
-        if (lang === 'zh') {
-          btnZh.className = "px-3 py-1 rounded-full bg-slate-900 text-white";
-          btnEn.className = "px-3 py-1 rounded-full bg-slate-200 text-slate-800";
-        } else {
-          btnZh.className = "px-3 py-1 rounded-full bg-slate-200 text-slate-800";
-          btnEn.className = "px-3 py-1 rounded-full bg-slate-900 text-white";
-        }
-      }
+      // Update html lang
+      document.documentElement.lang = (LANG_META[lang]?.htmlLang) || "zh-TW";
 
-      localStorage.setItem('lang', lang);
+      // Update WhatsApp prefill text per language (optional but professional)
+      const wa = document.getElementById("waLink");
+      if (wa) {
+        const msg = {
+          "zh-Hant": "你好，我想諮詢服務",
+          "en": "Hi, I'd like to ask about your services.",
+          "zh-Hans": "你好，我想咨询服务",
+          "ms": "Hai, saya ingin bertanya tentang perkhidmatan anda."
+        }[lang] || "你好，我想諮詢服務";
+
+        wa.href = "https://wa.me/60166262464?text=" + encodeURIComponent(msg);
+      }
+    }
+
+    function setLang(lang) {
+      const supported = ["zh-Hant", "en", "zh-Hans", "ms"];
+      const target = supported.includes(lang) ? lang : "zh-Hant";
+
+      // Apply text
+      applyI18n(target);
+
+      // Toggle button styles
+      const map = {
+        "zh-Hant": "btnZhHant",
+        "en": "btnEn",
+        "zh-Hans": "btnZhHans",
+        "ms": "btnMs"
+      };
+      supported.forEach(code => {
+        const id = map[code];
+        const btn = document.getElementById(id);
+        if (!btn) return;
+        btn.className = (code === target)
+          ? "px-3 py-1 rounded-full bg-slate-900 text-white"
+          : "px-3 py-1 rounded-full bg-slate-200 text-slate-800";
+      });
+
+      localStorage.setItem("lang", target);
     }
 
     // Default language
-    const savedLang = localStorage.getItem('lang') || 'zh';
+    const savedLang = localStorage.getItem("lang") || "zh-Hant";
     setLang(savedLang);
 
     // ====== Poster Gallery ======
@@ -559,7 +734,7 @@
       document.getElementById('gCount').innerText = `${gIdx + 1} / ${gList.length}`;
     }
 
-    // ====== Merch Gallery (你的 5 張圖) ======
+    // ====== Merch Gallery ======
     const merchList = [
       "https://i.postimg.cc/g0GBcTVh/Chat_GPT_Image_2025年12月18日_20_45_43.png",
       "https://i.postimg.cc/TPQNKJ05/Chat_GPT_Image_2025年3月29日_19_28_11.png",
@@ -577,7 +752,7 @@
       if (count) count.innerText = `${merchIdx + 1} / ${merchList.length}`;
     }
 
-    // ====== Modal control (one set only) ======
+    // ====== Modal control ======
     const YT_EMBED_URL = "https://www.youtube-nocookie.com/embed/3y2XqzEB_1Y";
 
     function openModal(id) {
@@ -587,7 +762,6 @@
       modal.style.display = "block";
       document.body.style.overflow = "hidden";
 
-      // Load video only when opened
       if (id === "modalVideo") {
         const iframe = document.getElementById("ytPlayer");
         if (iframe) iframe.src = YT_EMBED_URL + "?autoplay=1";
@@ -601,21 +775,18 @@
       modal.style.display = "none";
       document.body.style.overflow = "auto";
 
-      // Stop video when closed
       if (id === "modalVideo") {
         const iframe = document.getElementById("ytPlayer");
         if (iframe) iframe.src = "";
       }
     }
 
-    // Click backdrop to close
     window.addEventListener("click", function (event) {
       if (event.target && event.target.classList && event.target.classList.contains("modal")) {
         closeModal(event.target.id);
       }
     });
 
-    // ESC to close
     window.addEventListener("keydown", function (event) {
       if (event.key !== "Escape") return;
       ["modalFood", "modalPoster", "modalVideo", "modalMerch"].forEach(id => {
