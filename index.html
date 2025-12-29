@@ -35,7 +35,7 @@
     <section class="pt-40 pb-24 hero-gradient px-6">
         <div class="max-w-4xl mx-auto text-center">
             <div class="mb-10 flex justify-center">
-                <img src="https://i.postimg.cc/JGVHssWV/logo.jpg" class="w-48 h-48 md:w-64 md:h-64 rounded-full shadow-2xl border-8 border-white object-cover" alt="Logo">
+                <img src="https://i.postimg.cc/02rYHSWQ/LOGO.png" class="w-48 h-48 md:w-64 md:h-64 rounded-full shadow-2xl border-8 border-white object-cover" alt="Logo">
             </div>
             <h2 class="text-sm tracking-[0.4em] text-blue-600 font-bold mb-4 uppercase">Content & Design Integration</h2>
             <h1 class="text-4xl md:text-6xl font-bold text-slate-900 mb-8 leading-tight">把想法整理成<span class="text-slate-400 font-light italic">質感的成果。</span></h1>
@@ -161,11 +161,11 @@
             <span onclick="closeModal('modalFood')" class="absolute right-6 top-6 text-2xl cursor-pointer text-slate-400">&times;</span>
             <h3 class="font-bold text-xl mb-6">美食修圖 前後對比</h3>
             <div class="img-placeholder mb-8">
-                <img id="foodImg" src="https://i.postimg.cc/qhN4Lxyv/before.jpg" class="w-full h-80 object-contain">
+                <img id="foodImg" src="https://i.postimg.cc/0Qfj9tND/美食前.webp" class="w-full h-80 object-contain">
             </div>
             <div class="flex gap-4">
-                <button onclick="document.getElementById('foodImg').src='https://i.postimg.cc/qhN4Lxyv/before.jpg'" class="flex-1 py-4 bg-slate-100 rounded-2xl font-bold">原圖</button>
-                <button onclick="document.getElementById('foodImg').src='https://i.postimg.cc/sBV2pWTK/after.jpg'" class="flex-1 py-4 bg-blue-600 text-white rounded-2xl font-bold shadow-lg">修圖後 ✨</button>
+                <button onclick="document.getElementById('foodImg').src='https://i.postimg.cc/0Qfj9tND/美食前.webp'" class="flex-1 py-4 bg-slate-100 rounded-2xl font-bold">原圖</button>
+                <button onclick="document.getElementById('foodImg').src='https://i.postimg.cc/8CvrgBM8/美食后.png'" class="flex-1 py-4 bg-blue-600 text-white rounded-2xl font-bold shadow-lg">修圖後 ✨</button>
             </div>
         </div>
     </div>
@@ -175,11 +175,11 @@
             <span onclick="closeModal('modalPoster')" class="absolute right-6 top-6 text-2xl cursor-pointer text-slate-400">&times;</span>
             <h3 class="font-bold text-xl mb-6">活動海報 作品集</h3>
             <div class="img-placeholder mb-8">
-                <img id="galleryImg" src="https://i.postimg.cc/9w2gMWmH/1.jpg" class="w-full h-80 md:h-[450px] object-contain">
+                <img id="galleryImg" src="https://i.postimg.cc/J0DfpnS0/上映日_地點_6yi咖啡館_日期.png" class="w-full h-80 md:h-[450px] object-contain">
             </div>
             <div class="flex justify-between items-center px-4">
                 <button onclick="changeG(-1)" class="text-blue-600 font-bold">❮ PREV</button>
-                <span id="gCount" class="text-slate-400 text-sm">1 / 5</span>
+                <span id="gCount" class="text-slate-400 text-sm">1 / 3</span>
                 <button onclick="changeG(1)" class="text-blue-600 font-bold">NEXT ❯</button>
             </div>
         </div>
@@ -191,6 +191,38 @@
             <h3 class="font-bold text-xl mb-8 text-center">AI 影音作品展示</h3>
             <div class="aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl">
                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/w7fFVWgcvp0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) { document.getElementById(id).style.display = "block"; document.body.style.overflow = "hidden"; }
+        function closeModal(id) { document.getElementById(id).style.display = "none"; document.body.style.overflow = "auto"; }
+        
+        // 3. 您的 3 張海報圖片清單
+        const gList = [
+            "https://i.postimg.cc/J0DfpnS0/上映日_地點_6yi咖啡館_日期.png",
+            "https://i.postimg.cc/BbLrm6Rn/六異之夜_(2).png",
+            "https://i.postimg.cc/76Wv17tz/GMBB_香牌.png"
+        ];
+        
+        let gIdx = 0;
+        function changeG(n) {
+            gIdx = (gIdx + n + gList.length) % gList.length;
+            document.getElementById('galleryImg').src = gList[gIdx];
+            // 這裡也已自動更新為 3 張
+            document.getElementById('gCount').innerText = `${gIdx + 1} / 3`;
+        }
+        
+        window.onclick = function(event) { if (event.target.className === 'modal') { closeModal(event.target.id); } }
+    </script>
+
+    <div id="modalVideo" class="modal">
+        <div class="modal-content">
+            <span onclick="closeModal('modalVideo')" class="absolute right-6 top-6 text-2xl cursor-pointer text-slate-400">&times;</span>
+            <h3 class="font-bold text-xl mb-8 text-center">AI 影音作品展示</h3>
+            <div class="aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl">
+                <iframe width="100%" height="100%" src="https://youtu.be/3y2XqzEB_1Y?si=ui0fP0wntEOqe9AV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>
